@@ -65,8 +65,8 @@
     <!--герой-->
     <section class="section-one">
       <h1 class="section-one-text">ЭФФЕКТИВНЫЕ РЕШЕНИЕ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-      <a class="section-one-zakaz" href="#">Заказать услугу</a>
-    </section>
+      <button class="button-hero" data-modal-open>Заказать услугу</button>
+      </section>
 
     <!--Преимущества-->
     <section class="section-two section-padding">
@@ -413,15 +413,90 @@
         </div>
         <div class="footer-e-mail-nput">
           <p class="footer-e-mail-nput-name">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
-          <form>
-            <input class="footer-input" type="text" placeholder="E-mail">
-            <button class="footer-ckick">
-              подписаться<i class="fas fa-paper-plane" aria-hidden="true"></i>
+          <form class="subscribe-form">
+            <input 
+            class="footer-input" 
+            type="email"
+            name="email" 
+            placeholder="Email" 
+          />
+            <button class="footer-ckick" type="submit">
+              Подписаться
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
             </button>
           </form>
         </div>
       </div>
       <p class="text-under-line">2020 | Developed by GoIT Students</p>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <b class="modal-b">Оставьте свои данные, мы вам перезвоним</b>
+        <form class="form">
+          <div class="form-field">
+            <input class="form-input" type="text" name="user-name" id="user-name" placeholder=" " />
+            <label class="form-label" for="user-name">Имя</label>
+            <span class="icon-form">
+              <svg class="icon">
+                <use href=""></use>
+              </svg>
+            </span>
+          </div>
+    
+          <div class="form-field">
+            <input class="form-input" type="tel" name="user-phone" id="user-phone" placeholder=" " />
+            <label class="form-label" for="user-phone">Телефон</label>
+            <span class="icon-form">
+              <svg class="icon">
+                <use href=""></use>
+              </svg>
+            </span>
+          </div>
+    
+          <div class="form-field">
+            <input class="form-input" type="email" name="user-email" id="user-email" placeholder=" " />
+            <label class="form-label" for="user-email">Почта</label>
+            <span class="icon-form">
+              <svg class="icon">
+                <use href=""></use>
+              </svg>
+            </span>
+          </div>
+    
+          <!-- <div class="form-field textarea">
+                <textarea
+                  class="textarea"
+                  name="coments"
+                  rows="10"
+                  placeholder=" "
+                  id="textarea"
+                ></textarea>
+                <label class="form-label" for="textarea">Комментарий</label>
+              </div> -->
+    
+          <div class="textarea-div">
+            <textarea class="form-input textarea" name="textarea" rows="10" id="textarea" placeholder=" "></textarea>
+            <label class="textarea-label" for="textarea">Комментарий</label>
+          </div>
+    
+          <label class="label-checkbox">
+            <input class="checkbox" type="checkbox" name="checkbox" />
+            <span class="icon-checkbox"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a class="checkbox-link" href="">Условия договора</a>
+          </label>
+    
+          <button class="submit-button" type="submit">Отправить</button>
+    
+          <button class="close-button" type="button" data-modal-close>
+            <svg class="icon-form-close">
+              <use href=""></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
